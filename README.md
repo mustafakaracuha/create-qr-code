@@ -9,7 +9,7 @@ This app allows you to create and customize QR codes with a simple interface.
 
 ## Features
 
-- Customize QR code content (text, link, etc.).
+- Customize QR code content (text, color, size.).
 - Selecting background color and foreground color.
 - Adjusting QR code size.
 
