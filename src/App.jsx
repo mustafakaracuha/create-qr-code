@@ -8,6 +8,9 @@ import ColorPicker from "./components/ColorPicker";
 import SizeSelect from "./components/SizeSelect";
 import QrCode from "./components/QrCode";
 
+import data from "./components/ColorPicker/color";
+
+
 function App() {
   const [value, setValue] = useState("");
   const [back, setBack] = useState("#F3F4F6");
@@ -23,35 +26,6 @@ function App() {
 
   const refBackPicker = useRef(null);
   const refForePicker = useRef(null);
-
-  const darkColors = [
-    "#0F0F0F",
-    "#940B92",
-    "#4477CE",
-    "#E2703A",
-    "#183D3D",
-    "#734046",
-    "#CD1818",
-    "#0E8388",
-    "#008170",
-    "#816797",
-    "#735F32",
-  ];
-
-  const lightColors = [
-    "#FFF8C9",
-    "#DFCCFB",
-    "#E3F4F4",
-    "#FFBFBF",
-    "#ADC4CE",
-    "#9ED2BE",
-    "#D2E0FB",
-    "#F1F0E8",
-    "#FAF0D7",
-    "#FFEEF4",
-    "#F3FDE8",
-    "#FFF",
-  ];
 
   const handleSizeChange = (event) => {
     const newSize = parseInt(event.target.value, 10);
@@ -90,7 +64,7 @@ function App() {
 
         <ColorPicker
           color="back"
-          colors={lightColors}
+          colors={data.lightColors}
           selectedColor={back}
           onColorChange={(color) => setBack(color.hex)}
           setIsOpen={setIsBack}
@@ -102,7 +76,7 @@ function App() {
 
         <ColorPicker
           color="fore"
-          colors={darkColors}
+          colors={data.darkColors}
           selectedColor={fore}
           onColorChange={(color) => setFore(color.hex)}
           setIsOpen={setIsFore}
