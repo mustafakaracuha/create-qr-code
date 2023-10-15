@@ -49,7 +49,7 @@ function App() {
   };
 
   return (
-    <div className="w-full min-h-screen pr-5" onClick={handleClosePicker}>
+    <div className="w-full min-h-screen max-sm:pr-12" onClick={handleClosePicker}>
       <div className="max-w-md flex flex-col items-center justify-center min-h-screen mx-auto">
         <IoQrCodeOutline size={44} className="mb-3 text-indigo-500 animate-pulse" />
         <h1 className="flex items-center justify-center text-4xl mb-7 text-start  font-semibold text-indigo-400">
