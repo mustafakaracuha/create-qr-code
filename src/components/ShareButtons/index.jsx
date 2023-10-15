@@ -1,14 +1,14 @@
-import { FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdSave } from "react-icons/md";
 
 const ShareButtons = ({ qrValue, handleDownload }) => {
-  const handleInstagramShare = () => {
-    const instagramUrl = `https://www.instagram.com/share?url=${encodeURIComponent(qrValue)}`;
+  const handleLinkedin = () => {
+    const instagramUrl = `https://www.linkedin.com/in/mustafakaracuha`;
     window.open(instagramUrl, "_blank");
   };
 
-  const handleWhatsappShare = () => {
-    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(qrValue)}`;
+  const handleGitHub = () => {
+    const whatsappUrl = `https://github.com/mustafakaracuha`;
     window.open(whatsappUrl, "_blank");
   };
 
@@ -22,18 +22,18 @@ const ShareButtons = ({ qrValue, handleDownload }) => {
         <MdSave className="transition duration-300 text-white" size={30} />
       </button>
       <button
-        title="Instagram'da Paylaş"
-        className="mr-4 p-2 flex shadow-xl items-center justify-center bg-gradient-to-r from-pink-500 to-red-500 rounded-full text-white"
-        // onClick={handleInstagramShare}
+        title="Linkedin | mustafakaracuha"
+        className="mr-4 p-2 flex shadow-xl items-center justify-center bg-gradient-to-r from-blue-500 to-blue-600 rounded-full text-white"
+        onClick={handleLinkedin}
       >
-        <FaInstagram size={32} />
+        <FaLinkedin size={32} />
       </button>
       <button
-        title="WhatsApp'ta Paylaş"
-        className="mr-4 p-2 flex shadow-xl items-center justify-center bg-green-500 rounded-full text-white"
-        // onClick={handleWhatsappShare}
+        title="GitHub | mustafakaracuha"
+        className="mr-4 p-2 flex shadow-xl items-center justify-center bg-gradient-to-r from-gray-500 to-gray-600 rounded-full text-white"
+        onClick={handleGitHub}
       >
-        <FaWhatsapp size={32} />
+        <FaGithub className="text-white" size={32} />
       </button>
     </div>
   );
