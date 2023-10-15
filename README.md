@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-![QR Code Creator](https://github.com/mustafakaracuha/create-qr-code/blob/main/src/assets/images/app.png){ width=300px height=300px }
+![QR Code Creator](https://github.com/mustafakaracuha/create-qr-code/blob/main/src/assets/images/app.png){ width=300 }
 
 Bu uygulama, basitçe QR kodları oluşturmanıza ve özelleştirmenize olanak tanır.
 
