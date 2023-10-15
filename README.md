@@ -1,28 +1,28 @@
 # QR Code Creator
 
 <div align="center">
-  <img src="https://github.com/mustafakaracuha/create-qr-code/blob/main/src/assets/images/app.png" alt="QR Code Creator">
+   <img src="https://github.com/mustafakaracuha/create-qr-code/blob/main/src/assets/images/app.png" alt="QR Code Creator">
 </div>
 
 
-Bu uygulama, basit bir arayüzle QR kodları oluşturmanıza ve özelleştirmenize olanak tanır.
+This app allows you to create and customize QR codes with a simple interface.
 
-## Özellikler
+## Features
 
-- QR kod içeriğini özelleştirme (metin, bağlantı vb.).
-- Arka plan rengini ve ön plan rengini seçme.
-- QR kod boyutunu ayarlama.
+- Customize QR code content (text, link, etc.).
+- Selecting background color and foreground color.
+- Adjusting QR code size.
 
-## Nasıl Kullanılır
+## How to use
 
-1. QR kod içeriğini girebilir veya yapıştırabilirsiniz.
-2. Arka plan ve ön plan renklerini seçin.
-3. QR kod boyutunu belirleyin.
-4. "Kayget" düğmesine tıklayarak QR kodunuzu indirin.
+1. You can enter or paste the QR code content.
+2. Select background and foreground colors.
+3. Determine the QR code size.
+4. Download your QR code by clicking the "Kayget" button.
 
-## Kurulum
+## Setup
 
-1. Projeyi klonlayın:
+1. Clone the project:
 
 ```bash
 git clone https://github.com/mustafakaracuha/create-qr-code.git
