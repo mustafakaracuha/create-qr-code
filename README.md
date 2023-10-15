@@ -1,8 +1,8 @@
 # QR Code Creator
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![QR Code Creator](https://github.com/mustafakaracuha/create-qr-code/blob/main/src/assets/images/app.png)
 
-Bu uygulama, basitçe QR kodları oluşturmanıza ve özelleştirmenize olanak tanır.
+Bu uygulama, basit bir arayüzle QR kodları oluşturmanıza ve özelleştirmenize olanak tanır.
 
 ## Özellikler
 
@@ -12,16 +12,15 @@ Bu uygulama, basitçe QR kodları oluşturmanıza ve özelleştirmenize olanak t
 
 ## Nasıl Kullanılır
 
-1. QR kod içeriğini girin.
+1. QR kod içeriğini girebilir veya yapıştırabilirsiniz.
 2. Arka plan ve ön plan renklerini seçin.
 3. QR kod boyutunu belirleyin.
-4. QR kodunu oluşturun ve indirin.
+4. "Oluştur ve İndir" düğmesine tıklayarak QR kodunu indirin.
 
 ## Kurulum
 
-Projeyi klonlayın ve gerekli bağımlılıkları yükleyin:
+1. Projeyi klonlayın:
 
 ```bash
 git clone https://github.com/mustafakaracuha/create-qr-code.git
 cd create-qr-code
-npm install
