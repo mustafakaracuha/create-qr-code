@@ -2,7 +2,7 @@ import React from "react";
 
 const SizeSelect = ({ value, onChange }) => {
   return (
-    <div className="w-[300px] h-16 flex items-center justify-between bg-gray-100 rounded-xl px-4 ">
+    <div className="w-[300px] ml-1 h-16 flex items-center justify-between bg-gray-100 rounded-xl px-4 ">
       <label htmlFor="sizeSelect" className="font-medium">
         QR Kod Boyutu:
       </label>

@@ -32,7 +32,7 @@ const ColorPicker = ({
 
       {isOpen && (
         <div
-          className="absolute top-[4.5em] left-0 z-50 bg-gray-100 p-3 rounded-xl"
+          className="absolute top-[4.5em] left-12 z-50 bg-gray-100 p-3 rounded-xl"
           ref={refPicker}
         >
           <CirclePicker
