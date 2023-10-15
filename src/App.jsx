@@ -34,18 +34,22 @@ function App() {
     "#CD1818",
     "#0E8388",
     "#008170",
+    "#816797",
+    "#735F32",
   ];
 
   const lightColors = [
     "#FFF8C9",
     "#DFCCFB",
-    "#A8DF8E",
+    "#E3F4F4",
     "#FFBFBF",
     "#ADC4CE",
     "#9ED2BE",
     "#D2E0FB",
     "#F1F0E8",
     "#FAF0D7",
+    "#FFEEF4",
+    "#F3FDE8",
     "#FFF",
   ];
 
@@ -85,6 +89,7 @@ function App() {
         />
 
         <ColorPicker
+          color="back"
           colors={lightColors}
           selectedColor={back}
           onColorChange={(color) => setBack(color.hex)}
@@ -96,6 +101,7 @@ function App() {
         />
 
         <ColorPicker
+          color="fore"
           colors={darkColors}
           selectedColor={fore}
           onColorChange={(color) => setFore(color.hex)}
