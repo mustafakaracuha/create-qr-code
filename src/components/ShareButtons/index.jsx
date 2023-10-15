@@ -1,4 +1,4 @@
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { MdSave } from "react-icons/md";
 
 const ShareButtons = ({ qrValue, handleDownload }) => {
@@ -26,7 +26,7 @@ const ShareButtons = ({ qrValue, handleDownload }) => {
         className="mr-4 p-2 flex shadow-xl items-center justify-center bg-gradient-to-r from-blue-500 to-blue-600 rounded-full text-white"
         onClick={handleLinkedin}
       >
-        <FaLinkedin size={32} />
+        <FaLinkedinIn size={32} />
       </button>
       <button
         title="GitHub | mustafakaracuha"
