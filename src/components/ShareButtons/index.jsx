@@ -3,9 +3,7 @@ import { MdSave } from "react-icons/md";
 
 const ShareButtons = ({ qrValue, handleDownload }) => {
   const handleInstagramShare = () => {
-    const instagramUrl = `https://www.instagram.com/share?url=${encodeURIComponent(
-      qrValue
-    )}`;
+    const instagramUrl = `https://www.instagram.com/share?url=${encodeURIComponent(qrValue)}`;
     window.open(instagramUrl, "_blank");
   };
 
@@ -26,14 +24,14 @@ const ShareButtons = ({ qrValue, handleDownload }) => {
       <button
         title="Instagram'da Paylaş"
         className="mr-4 p-2 flex shadow-xl items-center justify-center bg-gradient-to-r from-pink-500 to-red-500 rounded-full text-white"
-        onClick={handleInstagramShare}
+        // onClick={handleInstagramShare}
       >
         <FaInstagram size={32} />
       </button>
       <button
         title="WhatsApp'ta Paylaş"
         className="mr-4 p-2 flex shadow-xl items-center justify-center bg-green-500 rounded-full text-white"
-        onClick={handleWhatsappShare}
+        // onClick={handleWhatsappShare}
       >
         <FaWhatsapp size={32} />
       </button>
