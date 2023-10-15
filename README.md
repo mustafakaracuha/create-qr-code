@@ -27,3 +27,4 @@ This app allows you to create and customize QR codes with a simple interface.
 ```bash
 git clone https://github.com/mustafakaracuha/create-qr-code.git
 cd create-qr-code
+npm install
