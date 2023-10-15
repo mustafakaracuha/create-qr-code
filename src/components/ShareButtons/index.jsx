@@ -5,9 +5,7 @@ import { MdSave } from "react-icons/md";
 
 const ShareButtons = ({ qrValue, handleDownload}) => {
     const handleInstagramShare = () => {
-      const instagramUrl = `https://www.instagram.com/share?url=${encodeURIComponent(
-        qrValue
-      )}`;
+      const instagramUrl = `https://www.instagram.com/share?url=${encodeURIComponent(qrValue)}`;
       window.open(instagramUrl, "_blank");
     };
   
