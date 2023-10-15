@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import QRCode from "react-qr-code";
 
-import { PiDownloadSimpleBold } from "react-icons/pi";
+import ShareButtons from "../ShareButtons";
 
 
 function qrCode({qrValue, back, fore, size}) {
@@ -22,35 +22,31 @@ function qrCode({qrValue, back, fore, size}) {
     link.download = `${qrValue}.svg`;
     link.click();
   
-    svgElement.setAttribute("width", "256");
-    svgElement.setAttribute("height", "256");
+    svgElement.setAttribute("width", "220");
+    svgElement.setAttribute("height", "220");
   };
 
 
   return (
     <>
       {qrValue && (
-        <div className="relative">
+        <div className="flex">
           <div
+            title="Qr kod"
             id="qr-svg"
             ref={svgRef}
-            className="mt-8 mr-8 -z-1 rounded-2xl overflow-hidden shadow-xl"
+            className="mt-8 mr-5 -z-1 rounded-2xl overflow-hidden shadow-xl cursor-pointer"
           >
             <QRCode
               value={qrValue}
               bgColor={back}
               fgColor={fore}
-              size={256}
+              size={220}
               level="H"
             />
           </div>
 
-          <button
-            className="p-4 mr-9 bg-violet-400 transition duration-500 shadow-xl absolute -bottom-12 -right-16 rounded-full"
-            onClick={handleDownload}
-          >
-            <PiDownloadSimpleBold className="text-white" size={23} />
-          </button>
+          <ShareButtons handleDownload={handleDownload} back={back} fore={fore}/>
         </div>
       )}
     </>
