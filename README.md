@@ -1,7 +1,7 @@
 # QR Code Creator
 
 <div align="center">
-  <img style="margin-bottom:5px" src="https://github.com/mustafakaracuha/create-qr-code/blob/main/src/assets/images/app.png" alt="QR Code Creator">
+  <img style="margin-bottom:20px" src="https://github.com/mustafakaracuha/create-qr-code/blob/main/src/assets/images/app.png" alt="QR Code Creator">
 </div>
 
 
