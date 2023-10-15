@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+
 import { IoQrCodeOutline } from "react-icons/io5";
 import { MdOutlineColorLens } from "react-icons/md";
 
@@ -6,7 +7,6 @@ import Input from "./components/Input";
 import ColorPicker from "./components/ColorPicker";
 import SizeSelect from "./components/SizeSelect";
 import QrCode from "./components/QrCode";
-import ShareButtons from "./components/ShareButtons";
 
 function App() {
   const [value, setValue] = useState("");

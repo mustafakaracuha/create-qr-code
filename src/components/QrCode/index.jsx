@@ -7,7 +7,6 @@ import ShareButtons from "../ShareButtons";
 function qrCode({qrValue, back, fore, size}) {
   const svgRef = useRef(null);
 
-
   const handleDownload = () => {
     const svg = document.getElementById("qr-svg");
   

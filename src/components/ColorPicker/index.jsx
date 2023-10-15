@@ -1,5 +1,5 @@
 import React from "react";
-import { TwitterPicker } from "react-color";
+import { CirclePicker } from "react-color";
 
 const ColorPicker = ({
   colors,
@@ -9,7 +9,7 @@ const ColorPicker = ({
   isOpen,
   refPicker,
   icon,
-  placeholder
+  placeholder,
 }) => {
   return (
     <div className="flex flex-col items-start justify-center relative mb-4">
@@ -31,8 +31,12 @@ const ColorPicker = ({
       </div>
 
       {isOpen && (
-        <div className="absolute top-[4.5em] left-0 z-50" ref={refPicker}>
-          <TwitterPicker
+        <div
+          className="absolute top-[4.5em] left-0 z-50 bg-gray-100 p-3 rounded-xl"
+          ref={refPicker}
+        >
+          <CirclePicker
+            className="border-none outline-none"
             colors={colors}
             triangle="hide"
             onChange={onColorChange}
