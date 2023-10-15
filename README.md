@@ -1,6 +1,9 @@
 # QR Code Creator
 
-![QR Code Creator](https://github.com/mustafakaracuha/create-qr-code/blob/main/src/assets/images/app.png)
+<div align="center">
+  <img src="https://github.com/mustafakaracuha/create-qr-code/blob/main/src/assets/images/app.png" alt="QR Code Creator">
+</div>
+
 
 Bu uygulama, basit bir arayüzle QR kodları oluşturmanıza ve özelleştirmenize olanak tanır.
 
