@@ -50,9 +50,7 @@ function App() {
     const svgData = new XMLSerializer().serializeToString(svg);
 
     const link = document.createElement("a");
-    link.href = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(
-      svgData
-    )}`;
+    link.href = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svgData)}`;
     link.download = `${qrValue}.svg`;
     link.click();
 
