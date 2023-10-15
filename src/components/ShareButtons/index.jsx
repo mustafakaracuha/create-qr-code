@@ -13,7 +13,7 @@ const ShareButtons = ({ qrValue, handleDownload }) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-around mt-10 ml-8 mr-5">
+    <div className="flex flex-col items-center justify-around mt-10 ml-8">
       <button
         title="Kaydet"
         className="mr-4 p-2 flex shadow-xl items-center justify-center transition duration-500 bg-gradient-to-r from-indigo-500 to-violet-500 rounded-full"
