@@ -75,7 +75,7 @@ function App() {
       <div className="max-w-md flex flex-col items-center justify-center min-h-screen mx-auto">
         <IoQrCodeOutline size={44} className="mr-12 mb-4 text-indigo-500 animate-pulse" />
         <h1 className="flex items-center justify-center text-4xl mb-7 text-start mr-12 font-semibold text-indigo-400">
-          Qr kodunu yarat
+          Qr kodunu tasarla
         </h1>
 
         <Input
