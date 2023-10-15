@@ -16,7 +16,7 @@ const ColorPicker = ({
       <div className="flex items-center justify-center">
         <input
           style={{ background: selectedColor }}
-          className="w-[300px] h-16 outline-none font-medium border-2 border-transparent rounded-xl transition duration-300 px-4"
+          className="w-[300px] h-16 outline-none font-medium border-2 ml-12 border-transparent rounded-xl transition duration-300 px-4"
           type="text"
           disabled
           placeholder={placeholder}

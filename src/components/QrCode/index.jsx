@@ -34,7 +34,7 @@ function qrCode({qrValue, back, fore, size}) {
             title="Qr kod"
             id="qr-svg"
             ref={svgRef}
-            className="mt-8 mr-5 -z-1 rounded-2xl overflow-hidden shadow-xl cursor-pointer"
+            className="mt-8 -z-1 ml-12 rounded-2xl overflow-hidden shadow-xl cursor-pointer"
           >
             <QRCode
               value={qrValue}
