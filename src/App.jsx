@@ -1,11 +1,12 @@
-import React, { useState, useEffect, useRef } from "react";
-import QRCode from "react-qr-code";
+import React, { useState, useEffect } from "react";
 import { TwitterPicker } from "react-color";
-import { PiDownloadSimpleBold } from "react-icons/pi";
+
+import QrCode from "./components/QrCode/QrCode";
+
 
 function App() {
   const [value, setValue] = useState("");
-  const [back, setBack] = useState("#FFFFFF");
+  const [back, setBack] = useState("#F3F4F6");
   const [isBack, setIsBack] = useState(false);
   const [fore, setFore] = useState("#000000");
   const [isFore, setIsFore] = useState(false);
@@ -16,52 +17,43 @@ function App() {
     setQrValue(value);
   }, [value, back, fore, size]);
 
-  const svgRef = useRef(null);
 
-  const colors = [
+  const darkColors = [
     "#0F0F0F",
-    "#6D67E4",
-    "#008170",
-    "#F39F5A",
-    "#AE445A",
-    "#C147E9",
+    "#940B92",
     "#4477CE",
+    "#F39F5A",
+    "#183D3D",
+    "#A76F6F",
     "#CD1818",
-    "#03C988",
+    "#0E8388",
+    "#008170",
     "#FFF",
   ];
 
-  const handleClosePicker = () => {
-    isBack || isFore ? setIsBack(false) || setIsFore(false) : "";
-  };
+  const lightColors = [
+    "#FFF8C9",
+    "#DFCCFB",
+    "#A8DF8E",
+    "#FFBFBF",
+    "#ADC4CE",
+    "#9ED2BE",
+    "#D2E0FB",
+    "#F1F0E8",
+    "#FAF0D7",
+    "#FFF",
+  ];
+
 
   const handleSizeChange = (event) => {
     const newSize = parseInt(event.target.value, 10);
     setSize(newSize);
   };
 
-  const handleDownload = () => {
-    const svg = document.getElementById("qr-svg");
-
-    const svgElement = svg.getElementsByTagName("svg")[0];
-    svgElement.setAttribute("width", size);
-    svgElement.setAttribute("height", size);
-
-    const svgData = new XMLSerializer().serializeToString(svg);
-
-    const link = document.createElement("a");
-    link.href = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svgData)}`;
-    link.download = `${qrValue}.svg`;
-    link.click();
-
-    svgElement.setAttribute("width", "256");
-    svgElement.setAttribute("height", "256");
-  };
 
   return (
     <div
       className="max-w-md flex flex-col items-center justify-center min-h-screen mx-auto"
-      onClick={handleClosePicker}
     >
       <h1 className="flex items-center justify-center text-4xl mb-7 text-start mr-9 font-semibold text-violet-500">
         Qr kodunu yarat
@@ -87,15 +79,15 @@ function App() {
           />
           <button
             onClick={() => setIsBack(!isBack)}
-            className="rounded-full w-5 p-1 h-5 bg-indigo-400 ml-4 outline-none transition duration-500 active:scale-110"
+            style={{background : back}}
+            className="rounded-full w-5 p-1 h-5 ml-4 outline-none transition duration-500 active:scale-110"
           ></button>
         </div>
         {isBack && (
           <div className="absolute top-[4.5em] left-0 z-50">
             <TwitterPicker
-              colors={colors}
-              triangle="Hide"
-              className="foreInput"
+              colors={lightColors}
+              triangle="hide"
               onChange={(color) => setBack(color.hex)}
             />
           </div>
@@ -113,16 +105,15 @@ function App() {
           />
           <button
             onClick={() => setIsFore(!isFore)}
-            className="rounded-full w-5 h-5 bg-amber-500 ml-4 outline-none transition duration-500 active:scale-110"
+            style={{background : fore}}
+            className="rounded-full w-5 h-5 ml-4 outline-none transition duration-500 active:scale-110"
           ></button>
         </div>
         {isFore && (
           <div className="absolute top-[4.5em] left-0 z-50">
             <TwitterPicker
-              onSwatchHover
-              colors={colors}
-              triangle="Hide"
-              className="foreInput"
+              colors={darkColors}
+              triangle="hide"
               onChange={(color) => setFore(color.hex)}
             />
           </div>
@@ -142,31 +133,7 @@ function App() {
           <option value="600">600</option>
         </select>
       </div>
-
-      {qrValue && (
-        <div className="relative">
-          <div
-            id="qr-svg"
-            ref={svgRef}
-            className="mt-8 mr-8 -z-1 rounded-2xl overflow-hidden shadow-xl"
-          >
-            <QRCode
-              value={qrValue}
-              bgColor={back}
-              fgColor={fore}
-              size={256}
-              level="H"
-            />
-          </div>
-
-          <button
-            className="p-4 mr-9 bg-amber-400 transition duration-500 shadow-xl absolute -bottom-12 -right-16 rounded-full"
-            onClick={handleDownload}
-          >
-            <PiDownloadSimpleBold className="text-white" size={23} />
-          </button>
-        </div>
-      )}
+      <QrCode qrValue={qrValue} back={back} fore={fore} size={size}/>
     </div>
   );
 }
