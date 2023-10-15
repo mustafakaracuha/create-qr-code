@@ -59,7 +59,7 @@ function App() {
         <Input
           value={value}
           onChange={(e) => setValue(e.target.value)}
-          placeholder="Qr kod içeriği"
+          placeholder="İçerik (Web sitesi, sosyal medya vs.)"
         />
 
         <ColorPicker
