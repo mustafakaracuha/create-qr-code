@@ -18,7 +18,7 @@ Bu uygulama, basit bir arayüzle QR kodları oluşturmanıza ve özelleştirmeni
 1. QR kod içeriğini girebilir veya yapıştırabilirsiniz.
 2. Arka plan ve ön plan renklerini seçin.
 3. QR kod boyutunu belirleyin.
-4. "Oluştur ve İndir" düğmesine tıklayarak QR kodunu indirin.
+4. "Kayget" düğmesine tıklayarak QR kodunuzu indirin.
 
 ## Kurulum
 
