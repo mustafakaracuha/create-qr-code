@@ -59,7 +59,7 @@ function App() {
         <Input
           value={value}
           onChange={(e) => setValue(e.target.value)}
-          placeholder="İçerik (Web sitesi, sosyal medya vs.)"
+          placeholder="İçerik (Web sitesi, sosyal medya vb.)"
         />
 
         <ColorPicker
