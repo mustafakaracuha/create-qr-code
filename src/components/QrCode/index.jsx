@@ -8,21 +8,49 @@ function qrCode({qrValue, back, fore, size}) {
   const svgRef = useRef(null);
 
   const handleDownload = () => {
-    const svg = document.getElementById("qr-svg");
-  
-    const svgElement = svg.getElementsByTagName("svg")[0];
-    svgElement.setAttribute("width", size);
-    svgElement.setAttribute("height", size);
-  
-    const svgData = new XMLSerializer().serializeToString(svg);
-  
-    const link = document.createElement("a");
-    link.href = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svgData)}`;
-    link.download = `${qrValue}.svg`;
-    link.click();
-  
-    svgElement.setAttribute("width", "220");
-    svgElement.setAttribute("height", "220");
+    const svgContainer = document.getElementById("qr-svg");
+    if (!svgContainer) return;
+
+    const svgElement = svgContainer.getElementsByTagName("svg")[0];
+    if (!svgElement) return;
+
+    // Use a high-resolution export size (e.g. 2000px)
+    const exportSize = 2000;
+
+    const clonedSvg = svgElement.cloneNode(true);
+    clonedSvg.setAttribute("width", exportSize.toString());
+    clonedSvg.setAttribute("height", exportSize.toString());
+
+    const svgString = new XMLSerializer().serializeToString(clonedSvg);
+    const svgBlob = new Blob([svgString], { type: "image/svg+xml;charset=utf-8" });
+    const blobURL = URL.createObjectURL(svgBlob);
+
+    const image = new Image();
+    image.onload = () => {
+      const canvas = document.createElement("canvas");
+      canvas.width = exportSize;
+      canvas.height = exportSize;
+      const context = canvas.getContext("2d");
+
+      context.clearRect(0, 0, exportSize, exportSize);
+      context.drawImage(image, 0, 0, exportSize, exportSize);
+
+      const pngURL = canvas.toDataURL("image/png");
+
+      const link = document.createElement("a");
+      link.href = pngURL;
+      link.download = `${qrValue || "qrcode"}.png`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      URL.revokeObjectURL(blobURL);
+    };
+    image.onerror = (err) => {
+      console.error("PNG conversion failed:", err);
+      URL.revokeObjectURL(blobURL);
+    };
+    image.src = blobURL;
   };
 
 
